@@ -1,0 +1,19 @@
+# Build binaries
+
+g++ -std=c++11 -o vh_side vh_side.cpp
+
+/opt/nec/ve/bin/nc++ -std=gnu++11 -o ve_side ve_side.cpp
+
+
+# Run the VH side, pass it an integer as shm key:
+
+./vh_side 1234
+
+
+# In another shell start the VE side program
+
+./ve_side 1234 67108864
+
+
+
+
